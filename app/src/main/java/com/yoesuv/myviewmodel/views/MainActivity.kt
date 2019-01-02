@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.yoesuv.myviewmodel.R
 import com.yoesuv.myviewmodel.databinding.ActivityMainBinding
+import com.yoesuv.myviewmodel.models.Mahasiswa
 import com.yoesuv.myviewmodel.viewmodels.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -19,5 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         binding.main = viewModel
+
+        val mhs = Mahasiswa("15201234","Leonel Messi","Informatika")
+        viewModel.setData(mhs)
     }
 }
