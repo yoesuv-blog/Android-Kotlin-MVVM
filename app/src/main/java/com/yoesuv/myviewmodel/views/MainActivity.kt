@@ -1,9 +1,9 @@
 package com.yoesuv.myviewmodel.views
 
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
 import com.yoesuv.myviewmodel.R
 import com.yoesuv.myviewmodel.databinding.ActivityMainBinding
 import com.yoesuv.myviewmodel.models.Mahasiswa
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.main = viewModel
 
         val mhs = Mahasiswa("15201234","Leonel Messi","Informatika")

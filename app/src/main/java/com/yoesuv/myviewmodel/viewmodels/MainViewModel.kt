@@ -1,8 +1,8 @@
 package com.yoesuv.myviewmodel.viewmodels
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
-import android.databinding.ObservableField
+import androidx.lifecycle.AndroidViewModel
+import androidx.databinding.ObservableField
 import com.yoesuv.myviewmodel.models.Mahasiswa
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
